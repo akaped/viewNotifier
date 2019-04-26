@@ -14,10 +14,10 @@ function getUserIpAddr(){
 }
 
 
-function sendMessage($chatID, $messaggio, $token) {
+function sendMessage($chatID, $message, $token) {
 
     $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $chatID;
-    $url = $url . "&text=" . urlencode($messaggio);
+    $url = $url . "&text=" . urlencode($message);
     $ch = curl_init();
     $optArray = array(
             CURLOPT_URL => $url,
